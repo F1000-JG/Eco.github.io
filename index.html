@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EcoMarker · Inicio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">EcoMarker <span>SV</span></a>
+    <nav id="nav" class="nav">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">☰</button>
+      <ul id="menu" class="menu">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="registro.html">Registro</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><button id="cartBtn" class="btn-link" aria-label="Carrito"><span>Carrito</span><span id="cartCount" class="badge">0</span></button></li>
+        <li><button id="themeToggle" class="btn-link" aria-label="Cambiar tema">Color</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Productos ecológicos para un futuro sostenible</h1>
+        <p>Compra responsable: orgánico, reutilizable y local. Descubre nuestra selección curada para tu hogar y tu comunidad.</p>
+        <div class="cta">
+          <a class="btn" href="productos.html">Ver catálogo</a>
+          <a class="btn ghost" href="registro.html">Crear cuenta</a>
+        </div>
+      </div>
+      <picture class="hero-media">
+        <img src="bolsa.jpg" alt="Bolsas reutilizables, botellas de acero y jabones ecológicos">
+      </picture>
+    </section>
+
+    <section class="features">
+      <article class="card">
+        <h3>Materiales reciclados</h3>
+        <p>Seleccionamos marcas que utilizan insumos reciclados o biodegradables.</p>
+      </article>
+      <article class="card">
+        <h3>Comercio local</h3>
+        <p>Impulsamos productores salvadoreños y la economía circular.</p>
+      </article>
+      <article class="card">
+        <h3>Envíos neutros</h3>
+        <p>Compensamos la huella de carbono en cada envío.</p>
+      </article>
+    </section>
+
+    <section class="grid">
+      <h2 class="section-title">Destacados</h2>
+      <div class="products" id="featuredGrid">
+        
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> EcoMarker SV · <a href="manual_usuario.html">Manual de usuario</a></p>
+  </footer>
+
+  <dialog id="cartDialog">
+    <form method="dialog" class="cart-panel">
+      <header class="cart-header">
+        <h2>Carrito</h2>
+        <button id="cartClose" class="btn ghost" value="cancel">Cerrar</button>
+      </header>
+      <div id="cartItems" class="cart-items" aria-live="polite"></div>
+      <footer class="cart-footer">
+        <div class="cart-total">Total: <strong id="cartTotal">$0.00</strong></div>
+        <div class="cart-actions">
+          <button id="cartClear" class="btn ghost" type="button">Vaciar</button>
+          <button class="btn" type="submit">Pagar (demo)</button>
+        </div>
+      </footer>
+    </form>
+  </dialog>
+
+</body>
+</html>
