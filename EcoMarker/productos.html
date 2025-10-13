@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EcoMarker · Productos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">EcoConecta <span>SV</span></a>
+    <nav id="nav" class="nav">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">☰</button>
+      <ul id="menu" class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html" aria-current="page">Productos</a></li>
+        <li><a href="registro.html">Registro</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><button id="cartBtn" class="btn-link" aria-label="Carrito"><span>Carrito</span><span id="cartCount" class="badge">0</span></button></li>
+        <li><button id="themeToggle" class="btn-link" aria-label="Cambiar tema">Color</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="wrapper">
+    <h1>Catálogo</h1>
+    <form class="toolbelt" id="filterForm" onsubmit="return false;">
+      <input type="search" id="q" placeholder="Buscar producto..." aria-label="Buscar">
+      <select id="cat" aria-label="Categoría">
+        <option value="">Todas las categorías</option>
+        <option value="hogar">Hogar</option>
+        <option value="cuidado">Cuidado personal</option>
+        <option value="movilidad">Movilidad</option>
+      </select>
+      <select id="sort" aria-label="Ordenar">
+        <option value="name">Nombre (A-Z)</option>
+        <option value="price">Precio (menor a mayor)</option>
+      </select>
+      <button class="btn" id="applyFilters">Aplicar</button>
+    </form>
+
+    <div class="products" id="productsGrid">
+      <!-- Rellenado por JS -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> EcoMarker</p>
+  </footer>
+
+  <dialog id="cartDialog">
+    <form method="dialog" class="cart-panel">
+      <header class="cart-header">
+        <h2>Carrito</h2>
+        <button id="cartClose" class="btn ghost" value="cancel">Cerrar</button>
+      </header>
+      <div id="cartItems" class="cart-items" aria-live="polite"></div>
+      <footer class="cart-footer">
+        <div class="cart-total">Total: <strong id="cartTotal">$0.00</strong></div>
+        <div class="cart-actions">
+          <button id="cartClear" class="btn ghost" type="button">Vaciar</button>
+          <button class="btn" type="submit">Pagar (demo)</button>
+        </div>
+      </footer>
+    </form>
+  </dialog>
+
+</body>
+</html>
