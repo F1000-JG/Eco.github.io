@@ -103,7 +103,7 @@ formRegister && formRegister.addEventListener("submit", (e)=>{
     password2:{required:true, min:6, eq:"password"}
   });
   if (ok){
-    alert("¡Registro exitoso! (demo)");
+    alert("¡Registro exitoso! ");
     formRegister.reset();
   }
 });
@@ -118,7 +118,7 @@ formContact && formContact.addEventListener("submit", (e)=>{
     message:{required:true, min:10}
   });
   if (ok){
-    alert("Mensaje enviado. ¡Gracias por contactarnos! (demo)");
+    alert("Mensaje enviado. ¡Gracias por contactarnos! ");
     formContact.reset();
   }
 });
