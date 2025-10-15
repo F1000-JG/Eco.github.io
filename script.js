@@ -8,8 +8,8 @@ const PRODUCTS = [
   { id:2, name:"Cepillo de bambú (pack x4)", price:6.50, cat:"cuidado", img:"Cepillobambu.jpg" },
   { id:3, name:"Bolsas reutilizables", price:4.25, cat:"hogar", img:"ecofactory-bolsa.png" },
   { id:4, name:"Shampoo sólido", price:7.75, cat:"cuidado", img:"shampoo.webp" },
-  { id:5, name:"Luces LED para bici (USB)", price:9.90, cat:"movilidad", img:"assets/p5.jpg" },
-  { id:6, name:"Pajillas de acero (x6)", price:5.00, cat:"hogar", img:"assets/p6.jpg" }
+  { id:5, name:"Luces LED para bici (USB)", price:9.90, cat:"movilidad", img:"Luces.jpg" },
+  { id:6, name:"Pajillas de acero (x6)", price:5.00, cat:"hogar", img:"Pajillas de acero.webp" }
 ];
 
 // Year
